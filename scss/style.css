@@ -157,7 +157,7 @@ body {
   overflow-x: hidden; }
 
 ::selection {
-  background: #19dd5d;
+  background: #1486af;
   color: #fff; }
 
 /* preloader */
@@ -456,7 +456,7 @@ textarea.form-control {
   left: 2rem; }
 
 .content .notices.tip p {
-  border-top: 30px solid #78C578;
+  border-top: 30px solid #1486af;
   background: #0F0F0F; }
 
 .content .notices.tip p::after {
