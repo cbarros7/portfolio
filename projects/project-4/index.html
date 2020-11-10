@@ -12,7 +12,8 @@
     <link rel=stylesheet href=../../plugins/themify-icons/themify-icons.css>
     <link rel=stylesheet href=../../scss/style.css media=screen>
     <link rel="shortcut icon" href=../../images/favicon.png type=image/x-icon>
-    <link rel=icon href=../../images/favicons.png type=image/x-icon> </head>
+    <link rel=icon href=../../images/favicons.png type=image/x-icon>
+</head>
 <style>
     .title-image {
         text-align: center;
@@ -34,8 +35,11 @@
     <div id=particles-js></div>
     <header class="sticky-top bg-black">
         <div class=container>
-            <nav class="navbar navbar-expand-lg navbar-dark bg-transparent"> <a class=navbar-brand href=https://carlosbarros.netlify.app><img class=img-fluid src=../../images/logo.png alt="Carlos Barros | Portfolio" width="170" height="250"></a> <button class="navbar-toggler border-0" type=button data-toggle=collapse
-                    data-target=#navigation> <i class="ti-menu text-white"></i></button>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-transparent"> <a class=navbar-brand
+                    href=https://carlosbarros.netlify.app><img class=img-fluid src=../../images/logo.png
+                        alt="Carlos Barros | Portfolio" width="170" height="250"></a> <button
+                    class="navbar-toggler border-0" type=button data-toggle=collapse data-target=#navigation> <i
+                        class="ti-menu text-white"></i></button>
                 <div class="collapse navbar-collapse text-center" id=navigation>
                     <ul class="navbar-nav mx-auto">
                         <li class=nav-item><a class=nav-link href=../../index.html>home</a></li>
@@ -43,7 +47,8 @@
                         <li class=nav-item><a class=nav-link href=../index.html>project</a></li>
                         <li class=nav-item><a class=nav-link href=../../contact.html>contact</a></li>
                         <li class=nav-item> </li>
-                    </ul> <a href=../../contact.html class="btn btn-primary ml-lg-4">contact</a> </div>
+                    </ul> <a href=../../contact.html class="btn btn-primary ml-lg-4">contact</a>
+                </div>
             </nav>
         </div>
     </header>
@@ -65,209 +70,291 @@
                     <div class="content mt-5">
                         <p style="font-size:35px"> <strong>INTRODUCTION</strong></p>
                         <p style="font-size:25px"> <strong>Problem</strong></p>
-                        <p> 
-                            The main challenges currently facing the energy sector according to Deloitte [1] are related 
-                            to three aspects: 1) generation, 2) distribution and 3) consumption. Clearly, the role of 
-                            technology in these challenges plays a crucial role, as the digital transformation of utilities
-                            can improve the efficiency of power generation and electricity transmission and distribution, while
-                            providing consumers with more capacity and choice in their energy use. In the same vein, General Electric 
-                            states that the digitalization of energy consumption is critical along with demand management [2], for 
-                            example, demand response programs are increasingly managed through digital solutions that help manage 
-                            customer demand response and facilitate associated financial exchanges between utilities and their 
+                        <p>
+                            The main challenges currently facing the energy sector according to Deloitte [1] are related
+                            to three aspects: 1) generation, 2) distribution, and 3) consumption. The role of
+                            technology in these challenges plays a crucial role, as the digital transformation of
+                            utilities
+                            can improve the efficiency of power generation and electricity transmission and
+                            distribution while
+                            providing consumers with more capacity and choice in their energy use. In the same vein,
+                            General Electric
+                            states that the digitalization of energy consumption is critical along with demand
+                            management [2], for
+                            example, demand response programs are increasingly managed through digital solutions that
+                            help manage
+                            customer demand response and facilitate associated financial exchanges between utilities and
+                            their
                             customers.</p>
-                        <p>   
-                            The main objective of this study is to forecast the energy consumption of 369 customers based on 
+                        <p>
+                            The main objective of this study is to forecast the energy consumption of 369 customers
+                            based on
                             historical data from January to April 2014 using 3 algorithms with the AWS cloud service.
                         </p>
                         <p>
                             The main assumptions made are:
                         </p>
                         <ol>
-                            <li><p>The overall average monthly energy consumption is similar.</p></li>
-                            <li><p>There is a trend for customers to consume energy on an hourly and daily basis.</p></li>
-                            <li><p>The forecast made is the average energy consumption of the last 7 days.</p></li>
+                            <li>
+                                <p>The overall average monthly energy consumption is similar.</p>
+                            </li>
+                            <li>
+                                <p>There is a trend for customers to consume energy on an hourly and daily basis.</p>
+                            </li>
+                            <li>
+                                <p>The forecast made is the average energy consumption of the last 7 days.</p>
+                            </li>
                         </ol>
                         <br>
 
                         <br><br>
                         <p style="font-size:25px"> <strong>Interests</strong></p>
-                            <p>
-                                Electricity generating companies and/or utilities seeking to implement digital 
-                                transformation strategies in energy demand management
-                             </p>
+                        <p>
+                            Electricity generating companies and/or utilities seeking to implement digital
+                            transformation strategies in energy demand management
+                        </p>
                         <br><br>
                         <p style="font-size:35px"> <strong>DATA</strong></p>
                         <p style="font-size:25px"> <strong>Data Source</strong></p>
                         <p>
-                            The <a href="https://docs.aws.amazon.com/forecast/latest/dg/samples/electricityusagedata.zip">
-                            electricityusagedata.zip</a> dataset is the electrical energy consumption of 
+                            The <a
+                                href="https://docs.aws.amazon.com/forecast/latest/dg/samples/electricityusagedata.zip">
+                                electricityusagedata.zip</a> dataset is the electrical energy consumption of
                             each household taken from the <a href="http://archive.ics.uci.edu/ml">UCI Machine Learning
-                            Repository</a> in Irvine, CA: University of California. As mentioned above, the dates of the 
-                            dataset are between 1/01/2014 and 29/04/2014, as for its structure it is important 
-                            to mention that it has 3 variables: 1) time 2) consumption in kWh and 3) customer for 
+                                Repository</a> in Irvine, CA: University of California. As mentioned above, the dates of
+                            the
+                            dataset are between 1/01/2014 and 29/04/2014, as for its structure it is important
+                            to mention that it has 3 variables: 1) time 2) consumption in kWh and 3) customer for
                             a total of 1,047,576 input data.
                         </p>
                         <br>
                         <p style="font-size:25px"> <strong>Exploratory analysis</strong></p>
-                        <p> 
-                            The average energy consumption in January was 526 kWh (<strong>see graph 1</strong>), with a decrease in February 
-                            and March; however, in April it showed an upward trend, reaching an average of 552 kWh, this being 
+                        <p>
+                            The average energy consumption in January was 526 kWh (<strong>see graph 1</strong>), with a
+                            decrease in February
+                            and March; however, in April it showed an upward trend, reaching an average of 552 kWh, this
+                            being
                             the month when most energy was consumed.
                         </p>
-                        <p style="text-align:center;"><img src="../../images/projects/project-4/promedio_por_mes.png"></p>
+                        <p style="text-align:center;"><img src="../../images/projects/project-4/promedio_por_mes.png">
+                        </p>
                         <p style="text-align:center;"><strong><i>Graph 1</i></strong></p><br><br>
                         <br>
-                        <p> 
-                            The average energy consumption per day has a similar trend in the months, for the month of January 
-                            (<strong>see graph 2</strong>) the peak was located on day 3 with 556 kWh and the lowest consumption 
+                        <p>
+                            The average energy consumption per day has a similar trend in the months, for the month of
+                            January
+                            (<strong>see graph 2</strong>) the peak was located on day 3 with 556 kWh and the lowest
+                            consumption
                             was on day 19 with 456 kWh.
                         </p>
-                        <p style="text-align:center;"><img src="../../images/projects/project-4/promedio_jan_by_days.png"></p>
+                        <p style="text-align:center;"><img
+                                src="../../images/projects/project-4/promedio_jan_by_days.png"></p>
                         <p style="text-align:center;"><strong><i>Graph2</i></strong></p><br>
                         <br>
-                        <p> 
-                            In February (<strong>see Appendix 1</strong>), the day of highest consumption was the 4th with 546 kWh and 436 kWh, 
-                            and the day of lowest consumption was the 16th. However, in March (<strong>see appendix 2</strong>) the highest 
-                            consumption was on the 15th with 536 kWh and at the end of the month, on the 30th, it showed the lowest 
-                            consumption with 496 kWh. Finally, April (<strong>see Appendix 3</strong>) had its highest consumption on the 17th with 
-                            600 kWh and three days later, that is, on April 20th it presented its lowest consumption with 501 kWh.
+                        <p>
+                            In February (<strong>see Appendix 1</strong>), the day of highest consumption was the 4th
+                            with 546 kWh and 436 kWh,
+                            and the day of the lowest consumption was the 16th. However, in March (<strong>see appendix
+                                2</strong>) the highest
+                            consumption was on the 15th with 536 kWh and at the end of the month, on the 30th, it showed
+                            the lowest
+                            consumption with 496 kWh. Finally, April (<strong>see Appendix 3</strong>) had its highest
+                            consumption on the 17th with
+                            600 kWh, and three days later, that is, on April 20th it presented its lowest consumption
+                            with 501 kWh.
                         </p>
-                        <p> 
-                            However, with regard to the consumption of the days of the week, the months analysed have maintained a similar trend 
-                            in the increase in energy consumption from Thursday to Sunday (<strong>see graph 3</strong>).
+                        <p>
+                            However, concerning the consumption of the days of the week, the months analyzed have
+                            maintained a similar trend
+                            in the increase in energy consumption from Thursday to Sunday (<strong>see graph
+                                3</strong>).
                         </p>
-                        <p style="text-align:center;"><img src="../../images/projects/project-4/promedio_jan_by_weekday.png"></p>
+                        <p style="text-align:center;"><img
+                                src="../../images/projects/project-4/promedio_jan_by_weekday.png"></p>
                         <p style="text-align:center;"><strong><i>Graph 3</i></strong></p><br><br>
-                        <br>                        
-                        <p> 
-                            <strong>Graph 4</strong> shows the behaviour of energy consumption per hour. It should be noted that the same trend was maintained 
-                            throughout the months, i.e. between 19:00 and 21:00, the highest consumption was recorded, with an average of 685 kWh. 
-                            On the other hand, at 5:00 a.m. every month the lowest energy consumption is recorded, with an average of 300 kWh.
-                        </p>  
-                        <p style="text-align:center;"><img src="../../images/projects/project-4/avg_jan_by_hour.png"></p>
+                        <br>
+                        <p>
+                            <strong>Graph 4</strong> shows the behavior of energy consumption per hour. It should be
+                            noted that the same trend was maintained
+                            throughout the months, i.e. between 19:00 and 21:00, the highest consumption was recorded,
+                            with an average of 685 kWh.
+                            On the other hand, at 5:00 a.m. every month the lowest energy consumption is recorded, with
+                            an average of 300 kWh.
+                        </p>
+                        <p style="text-align:center;"><img src="../../images/projects/project-4/avg_jan_by_hour.png">
+                        </p>
                         <p style="text-align:center;"><strong><i>Graph 4</i></strong></p><br><br>
                         <br>
-                        <p> 
-                            In the meantime, because the number of customers is large, for the purposes of exploratory analysis, the customers who consume 
-                            the most energy over the months will be taken into account on the condition that their consumption is equal to or greater 
+                        <p>
+                            In the meantime, because the number of customers is large, for exploratory
+                            analysis, the customers who consume
+                            the most energy over the months will be taken into account on the condition that their
+                            consumption is equal to or greater
                             than 5,000 kWh.
                         </p>
-                        <p> 
-                            In <strong>graph 5</strong>, it can be seen that the customer with the id 361 presented greater energy consumption during the months analyzed, 
-                            with April 13 being the day that generated a peak in its trend with 43,306 kWh. It is important to mention that the drop observed 
-                            at the end of the graph is due to the fact that on April 29th only 2 hours are recorded, because the data set ends on that day at 
+                        <p>
+                            In <strong>graph 5</strong>, it can be seen that the customer with the id 361 presented
+                            greater energy consumption during the months analyzed,
+                            with April 13 being the day that generated a peak in its trend with 43,306 kWh. It is
+                            important to mention that the drop observed
+                            at the end of the graph is since on April 29th only 2 hours are recorded,
+                            because the data set ends on that day at
                             02:00, therefore, the forecast will be made for the following 36 hours.
-                        </p>  
-                        <p style="text-align:center;"><img src="../../images/projects/project-4/promedio_top_clients_by_days.png"></p>
+                        </p>
+                        <p style="text-align:center;"><img
+                                src="../../images/projects/project-4/promedio_top_clients_by_days.png"></p>
                         <p style="text-align:center;"><strong><i>Graph 5</i></strong></p><br><br>
                         <br>
-                        <p> 
-                            A stationary trend can be observed in the consumption behavior of these customers in the first 15 days (<strong>see graph 6</strong>) 
-                            throughout all the months. For example, the customer with id 361 has the highest consumption between 22:00 
+                        <p>
+                            A stationary trend can be observed in the consumption behavior of these customers in the
+                            first 15 days (<strong>see graph 6</strong>)
+                            throughout all the months. For example, the customer with id 361 has the highest consumption
+                            between 22:00
                             and 02:00, the customer with id 195 has the highest consumption between 17:00 and 18:00.
                         </p>
-                        <p style="text-align:center;"><img src="../../images/projects/project-4/promedio_top_clients_by_jan_15d.png"></p>
+                        <p style="text-align:center;"><img
+                                src="../../images/projects/project-4/promedio_top_clients_by_jan_15d.png"></p>
                         <p style="text-align:center;"><strong><i>Graph 6</i></strong></p><br><br>
                         <br>
                         <p>
-                            On the other hand, the client with id 278 its hourly trend is located in the range of 19:00 and 21:00. Finally, the 
-                            client with the id 396 presents variations in his behavior with a schedule between 09:00 and 12:00, and in the evening 
-                            between 20:00 and 23:00. In addition, these customers generally consume the most energy at the weekend.
-                        </p> 
-                        <br> 
-                        <p style="font-size:20px"> <strong>METHODS</strong></p> 
+                            On the other hand, the client with id 278 its hourly trend is located in the range of 19:00
+                            and 21:00. Finally, the
+                            client with the id 396 presents variations in his behavior with a schedule between 09:00 and
+                            12:00, and the evening
+                            between 20:00 and 23:00. Also, these customers generally consume the most energy at
+                            the weekend.
+                        </p>
+                        <br>
+                        <p style="font-size:20px"> <strong>METHODS</strong></p>
                         <p>
-                            The method used to develop this study is Amazon Forecast which is a fully managed service that uses 
-                            machine learning to create forecasts with a high level of accuracy (<strong>see graph 7</strong>). The forecast for 
-                            this study was 36 hours with 3 quanta: 10, 50 and 90 respectively. The algorithms selected were 
-                            <strong>DeepAR+, ETS and Prophet.</strong>  
-                        </p>  
+                            The method used to develop this study is Amazon Forecast which is a fully managed service
+                            that uses
+                            machine learning to create forecasts with a high level of accuracy (<strong>see graph
+                                7</strong>). The forecast for
+                            this study was 36 hours with 3 quanta: 10, 50, and 90 respectively. The algorithms selected
+                            were
+                            <strong>DeepAR+, ETS, and Prophet.</strong>
+                        </p>
                         <p style="text-align:center;"><img src="../../images/projects/project-4/AWS-forecast.png"></p>
                         <p style="text-align:center;"><strong><i>Graph 7</i></strong></p><br><br>
                         <br>
 
-                        <p style="font-size:35px"> <strong>RESULTS</strong></p> 
-                        <p> 
+                        <p style="font-size:35px"> <strong>RESULTS</strong></p>
+                        <p>
                             The forecast result of the algorithm that best fitted the 50 and 90 quantiles was DeepAR+
-                            (<strong>see figure 8</strong>) with respect to the other two algorithms 
-                            (<strong>see appendix 4 and 5</strong>). In addition, it was 
-                            the one that was closest to the average with respect to a week prior to the forecast, that is, the days
+                            (<strong>see figure 8</strong>) concerning the other two algorithms
+                            (<strong>see appendix 4 and 5</strong>). Also, it was
+                            the one that was closest to the average for a week before the forecast, that
+                            is, the days
                             between 21/04/2014 and 29/04/2014 (<strong>figure 9</strong>).
-                        </p>  
-                        <p style="text-align:center;"><img src="../../images/projects/project-4/DEEPAR_avg_pronostico_horas.png"></p>
+                        </p>
+                        <p style="text-align:center;"><img
+                                src="../../images/projects/project-4/DEEPAR_avg_pronostico_horas.png"></p>
                         <p style="text-align:center;"><strong><i>Graph 8</i></strong></p><br><br>
                         <br>
                         <br>
-                        <p style="text-align:center;"><img src="../../images/projects/project-4/semana_anterior_by_horas.png"></p>
+                        <p style="text-align:center;"><img
+                                src="../../images/projects/project-4/semana_anterior_by_horas.png"></p>
                         <p style="text-align:center;"><strong><i>Graph 9</i></strong></p><br><br>
                         <br>
-                        <p> 
-                            It can be observed that the behavior of energy consumption a week before the forecast maintains a 
-                            stationary trend presenting a higher consumption in the hours between 17:00 and 21:00. The above 
-                            is consistent with the forecast since the peak in average energy consumption is at 18:00 on 29/04/2014
-                             with 792 kWh in the 90th quarter. After this time the consumption decreases until 04:00 on 30/04/2014 
-                             with 359 kWh, thus starting the consumption increase from 05:00.
+                        <p>
+                            It can be observed that the behavior of energy consumption a week before the forecast
+                            maintains a
+                            stationary trend presenting a higher consumption in the hours between 17:00 and 21:00. The
+                            above
+                            is consistent with the forecast since the peak in average energy consumption is at 18:00 on
+                            29/04/2014
+                            with 792 kWh in the 90th quarter. After this time the consumption decreases until 04:00 on
+                            30/04/2014
+                            with 359 kWh, thus starting the consumption increase from 05:00.
                         </p>
-                        <p> 
-                            Finally, with respect to the main customers specified in the exploratory analysis section, it can be
-                            concluded that for the customer with id 361 the peak of highest consumption on 04/29/2014 was at 21:00 
-                            with 64,582 kWh(<strong>see graph 10</strong>), however, this figure is exceeded the following day(04/30/2014) at 13:00
+                        <p>
+                            Finally, with respect to the main customers specified in the exploratory analysis section,
+                            it can be
+                            concluded that for the customer with id 361 the peak of highest consumption on 04/29/2014
+                            was at 21:00
+                            with 64,582 kWh(<strong>see graph 10</strong>), however, this figure is exceeded the
+                            following day(04/30/2014) at 13:00
                             with 67,904 kWh which could indicate an increase in consumption for the last day of April.
                         </p>
-                        <p style="text-align:center;"><img src="../../images/projects/project-4/pronostico_top_clientes.png"></p>
+                        <p style="text-align:center;"><img
+                                src="../../images/projects/project-4/pronostico_top_clientes.png"></p>
                         <p style="text-align:center;"><strong><i>Graph 10</i></strong></p><br><br>
                         <br>
-                        <p> 
-                            As can be seen, the behaviour of the other customers is similar, for example, for the customer with id 195 its highest
-                            consumption forecast for 29/04/2014 was at 18:00 with 27,376 kWh, however, this figure is exceeded on 30/04/2014 
-                            at 12:00 with 28,193 kWh. Customers with id 278 and 369 showed a linear trend in energy consumption.
-                        </p>  
+                        <p>
+                            As can be seen, the behaviour of the other customers is similar, for example, for the
+                            customer with id 195 its highest
+                            consumption forecast for 29/04/2014 was at 18:00 with 27,376 kWh, however, this figure is
+                            exceeded on 30/04/2014
+                            at 12:00 with 28,193 kWh. Customers with id 278 and 369 showed a linear trend in energy
+                            consumption.
+                        </p>
                         <br> <br>
                         <p style="font-size:35px"> <strong>CONCLUSIONS</strong></p>
-                        <p> 
-                            In accordance with the hypotheses put forward in this study, it could be determined that the general average
-                            of the months analysed remains in a similar range (520 kWh - 550 kWh). Similarly, a similar trend was 
-                            observed in the behaviour of energy consumption in the range of hours, days of the week and month. On 
-                            the other hand, the average energy consumption of the last 7 days prior to the forecast is in line with 
-                            the results obtained in the forecast. Finally, it is considered that the day 30/04/2014 will have a higher
-                             consumption than the previous day, this statement can also be reflected with the main customers mentioned 
-                             in the exploratory analysis section.
+                        <p>
+                            In accordance with the hypotheses put forward in this study, it could be determined that the
+                            general average
+                            of the months analysed remains in a similar range (520 kWh - 550 kWh). Similarly, a similar
+                            trend was
+                            observed in the behaviour of energy consumption in the range of hours, days of the week and
+                            month. On
+                            the other hand, the average energy consumption of the last 7 days prior to the forecast is
+                            in line with
+                            the results obtained in the forecast. Finally, it is considered that the day 30/04/2014 will
+                            have a higher
+                            consumption than the previous day, this statement can also be reflected with the main
+                            customers mentioned
+                            in the exploratory analysis section.
                         </p>
 
                         <br> <br>
                         <p style="font-size:35px"><strong>RECOMMENDATIONS</strong></p>
-                        <p> 
-                            For further studies, it is recommended to take into account a wider range of hours/days in the forecast while 
-                            retaining the methodology of using several algorithms in order to find the one that best fits the data set
-                             with the 50 and 90 quantatiles respectively.
+                        <p>
+                            For further studies, it is recommended to take into account a wider range of hours/days in
+                            the forecast while
+                            retaining the methodology of using several algorithms in order to find the one that best
+                            fits the data set
+                            with the 50 and 90 quantatiles respectively.
                         </p>
 
                         <br> <br>
                         <p style="font-size:35px"><strong>NOTES</strong></p>
                         <p>
-                            The graphics have been published in a dashboard through <a href="https://public.tableau.com/profile/carlos.barros#!/vizhome/consumo_energia/Resumen_pronostico_energia_por_hogares?publish=yes">Tableau Public</a>.
-                            Also, if you want to see similar projects along with the source code you can go to my 
-                            <a href="https://carlosbarros.netlify.app/">portfolio</a>. Finally, contact me through 
-                            <a href="https://www.linkedin.com/in/carlosbarros7/">LinkedIn</a> or <a href="https://twitter.com/cbarros27">Twitter</a>. 
-                        </p> <br> <br>                    
+                            The graphics have been published in a dashboard through <a
+                                href="https://public.tableau.com/profile/carlos.barros#!/vizhome/consumo_energia/Resumen_pronostico_energia_por_hogares?publish=yes">Tableau
+                                Public</a>.
+                            Also, if you want to see similar projects along with the source code you can go to my
+                            <a href="https://carlosbarros.netlify.app/">portfolio</a>. Finally, contact me through
+                            <a href="https://www.linkedin.com/in/carlosbarros7/">LinkedIn</a> or <a
+                                href="https://twitter.com/cbarros27">Twitter</a>.
+                        </p> <br> <br>
 
                         <p style="font-size:35px"> <strong>REFERENCES</strong></p>
-                            <p> [1]"Power Market Study 2030", Www2.deloitte.com, 2018. [Online]. Available: https://www2.deloitte.com/content/dam/Deloitte/de/Documents/energy-resources/Deloitte-Power-Market-Study-2030-EN.pdf. [Accessed: 02- Aug- 2020].</p>
-                            <p> [2]"The Digital Energy Transformation", Ge.com, 2018. [Online]. Available: https://www.ge.com/content/dam/gepower-pw/global/en_US/documents/digitalization/The%20Digital%20Energy%20Transformation.pdf. [Accessed: 02- Aug- 2020]. </p>
-                            <br><br>
+                        <p> [1]"Power Market Study 2030", Www2.deloitte.com, 2018. [Online]. Available:
+                            https://www2.deloitte.com/content/dam/Deloitte/de/Documents/energy-resources/Deloitte-Power-Market-Study-2030-EN.pdf.
+                            [Accessed: 02- Aug- 2020].</p>
+                        <p> [2]"The Digital Energy Transformation", Ge.com, 2018. [Online]. Available:
+                            https://www.ge.com/content/dam/gepower-pw/global/en_US/documents/digitalization/The%20Digital%20Energy%20Transformation.pdf.
+                            [Accessed: 02- Aug- 2020]. </p>
+                        <br><br>
 
-                            <p style="font-size:35px"> <strong>APPENDIX</strong></p>
-                            <p style="font-size:25px"> <strong>Appendix 1</strong></p>
-                            <p style="text-align:center;"><img src="../../images/projects/project-4/promedio_feb_by_days.png"></p><br>
-                            <p style="font-size:25px"> <strong>Appendix 2</strong></p>
-                            <p style="text-align:center;"><img src="../../images/projects/project-4/promedio_mar_by_days.png"></p><br>
-                            <p style="font-size:25px"> <strong>Appendix 3</strong></p>
-                            <p style="text-align:center;"><img src="../../images/projects/project-4/promedio_apr_by_days.png"></p><br>
-                            <p style="font-size:25px"> <strong>Appendix 4</strong></p>
-                            <p style="text-align:center;"><img src="../../images/projects/project-4/ETS_avg_pronostico_horas.png"></p><br>
-                            <p style="font-size:25px"> <strong>Appendix 5</strong></p>
-                            <p style="text-align:center;"><img src="../../images/projects/project-4/PROPHET_avg_pronostico_horas.png"></p><br>
-                        </div>
+                        <p style="font-size:35px"> <strong>APPENDIX</strong></p>
+                        <p style="font-size:25px"> <strong>Appendix 1</strong></p>
+                        <p style="text-align:center;"><img
+                                src="../../images/projects/project-4/promedio_feb_by_days.png"></p><br>
+                        <p style="font-size:25px"> <strong>Appendix 2</strong></p>
+                        <p style="text-align:center;"><img
+                                src="../../images/projects/project-4/promedio_mar_by_days.png"></p><br>
+                        <p style="font-size:25px"> <strong>Appendix 3</strong></p>
+                        <p style="text-align:center;"><img
+                                src="../../images/projects/project-4/promedio_apr_by_days.png"></p><br>
+                        <p style="font-size:25px"> <strong>Appendix 4</strong></p>
+                        <p style="text-align:center;"><img
+                                src="../../images/projects/project-4/ETS_avg_pronostico_horas.png"></p><br>
+                        <p style="font-size:25px"> <strong>Appendix 5</strong></p>
+                        <p style="text-align:center;"><img
+                                src="../../images/projects/project-4/PROPHET_avg_pronostico_horas.png"></p><br>
+                    </div>
                 </article>
             </div>
         </div>
@@ -277,13 +364,15 @@
             <div class=row>
                 <div class="col-12 text-center">
                     <ul class="list-inline social-icons mb-5">
-                        <li class=list-inline-item><a href=https://twitter.com/cbarros27><i class=ti-twitter-alt></i></a></li>
+                        <li class=list-inline-item><a href=https://twitter.com/cbarros27><i
+                                    class=ti-twitter-alt></i></a></li>
                         <li class=list-inline-item><a href=https://github.com/cbarros7><i class=ti-github></i></a></li>
-                        <li class=list-inline-item><a href=https://www.linkedin.com/in/carlosbarros7/><i class=ti-linkedin></i></a>
+                        <li class=list-inline-item><a href=https://www.linkedin.com/in/carlosbarros7 /><i
+                                class=ti-linkedin></i></a>
                         </li>
                     </ul>
                     <hr class="mx-auto border-default" style=width:90px>
-                    <p class=mt-5>Copyright © 2020 by <a href=https://themefisher.com/>themefisher</a>
+                    <p class=mt-5>Copyright © 2020 by <a href=https://themefisher.com />themefisher</a>
                     </p>
                 </div>
             </div>
