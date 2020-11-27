@@ -1,0 +1,600 @@
+<!doctype html>
+<html lang=en-us>
+
+<head>
+    <meta charset=utf-8>
+    <title>Customer segmentation model</title>
+    <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1">
+    <meta name=description content="This is meta description">
+    <meta name=author content="Themefisher">
+    <meta name=generator content="Hugo 0.69.0">
+    <link rel=stylesheet href=../../plugins/bootstrap/bootstrap.min.css>
+    <link rel=stylesheet href=../../plugins/themify-icons/themify-icons.css>
+    <link rel=stylesheet href=../../scss/style.css media=screen>
+    <link rel="shortcut icon" href=../../images/favicon.png type=image/x-icon>
+    <link rel=icon href=../../images/favicons.png type=image/x-icon>
+</head>
+<style>
+    .title-image {
+        text-align: center;
+    }
+
+    div {
+        text-align: justify;
+        text-justify: inter-word;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+</style>
+
+<body>
+    <div class=preloader></div>
+    <div id=particles-js></div>
+    <header class="sticky-top bg-black">
+        <div class=container>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-transparent"> <a class=navbar-brand
+                    href=https://carlosbarros.netlify.app><img class=img-fluid src=../../images/logo.png
+                        alt="Carlos Barros | Portfolio" width="170" height="250"></a> <button
+                    class="navbar-toggler border-0" type=button data-toggle=collapse data-target=#navigation> <i
+                        class="ti-menu text-white"></i></button>
+                <div class="collapse navbar-collapse text-center" id=navigation>
+                    <ul class="navbar-nav mx-auto">
+                        <li class=nav-item><a class=nav-link href=../../index.html>home</a></li>
+                        <li class=nav-item><a class=nav-link href=../../author/carlos-barros/index.html>about</a></li>
+                        <li class=nav-item><a class=nav-link href=../index.html>projects</a></li>
+                        <li class=nav-item><a class=nav-link href=../../contact.html>contact</a></li>
+                        <li class=nav-item> </li>
+                    </ul> <a href=https://drive.google.com/file/d/1uTtIrCwzVPf9QKep4VKpyYhKdShbYZRO/view?usp=sharing
+                        target="_blank" class="btn btn-primary ml-lg-2">CV</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <section class=section>
+        <div class="container text-left text-sm-center">
+            <h2>Customer segmentation model based on credit cards behavior</h2>
+        </div>
+    </section>
+    <section class="section pt-0">
+        <div class=container>
+            <div class=row>
+                <article class="col-lg-8 col-md-10 mx-auto" data-target=article>
+                    <div class=text-center>
+                        <ul class="list-inline mb-3">
+                            <li class=list-inline-item><i class="text-primary ti-calendar mr-2"></i>27 Nov, 2020</li>
+                            <li class=list-inline-item><i class="text-primary ti-time mr-2"></i>11 min read</li>
+                        </ul>
+                    </div>
+                    <div class="content mt-5">
+                        <p style="font-size:35px"> <strong>INTRODUCTION</strong></p>
+                        <p>
+                            According to Abraham Maslow in his theory about human motivations, it’s summarily important
+                            to recognize the human being as a living object with different necessities. That’s the
+                            reason why we must know how humans interact with our surroundings.</p>
+                        <p>
+                            Having said that, it’s well known that companies face a lot of challenges when it comes to
+                            satisfying their client’s changing necessities. That’s why they are always planning
+                            strategies to their benefit and more importantly their clients.
+                        </p>
+                        <p>
+                            Currently, many organizations rely on different data-based methods to segment their market
+                            by creating subsets based on demographics, needs, priorities, common interests, and other
+                            psychographic or behavioral criteria used to understand better their target audience.
+                        </p>
+                        <p>
+                            According to Accenture[1], banks use their data to create process improvements following
+                            these aspects:
+                        </p>
+
+
+                        <ol>
+                            <li>
+                                <p>Personalized products and services.</p>
+                            </li>
+                            <li>
+                                <p>Opportunities to predict patterns.</p>
+                            </li>
+                            <li>
+                                <p>Make agile and accurate decisions.</p>
+                            </li>
+                            <li>
+                                <p>Processes automatization to reduce costs and operative risks.</p>
+                            </li>
+                            <li>
+                                <p>Digital products and services.</p>
+                            </li>
+                        </ol>
+                        <br>
+
+                        <p>
+                            In other words, client classification becomes a competitive improvement because companies
+                            can use their time and resources for important things. This is also approved by Bain &
+                            Company[3], who says that 81% of businessmen consider client classification as an important
+                            way to improve companies profit. Bain also found out that companies with excellent client
+                            classifications strategies had an increase of 10% on their profit comparing them with the
+                            ones that didn’t during a period of five years.
+                        </p>
+                        <p>
+                            Having said that the main objective of this project was building a customer segmentation
+                            based on credit card payments behavior during the last six months to define marketing
+                            strategies.
+                        </p>
+
+                        <br><br>
+                        <p style="font-size:25px"> <strong>Concerned parties</strong></p>
+                        <p>
+                            Banks or financial entities who desire to segment their clients based on predictive models
+                            using Machine Learning as an important tool to improve their marketing strategies.
+                        </p>
+                        <br><br>
+                        <p style="font-size:35px"> <strong>DATA</strong></p>
+                        <p style="font-size:25px"> <strong>Data Source</strong></p>
+                        <p>
+                            The data source was taken from the Kaggle challenge called&nbsp;<a
+                                href="https://www.kaggle.com/arjunbhasin2013/ccdata">Credit Card
+                                Dataset for
+                                Clustering</a>. The sample Dataset summarizes the usage behavior of about 9000 active
+                            credit
+                            cardholders during the last six months.
+                        </p>
+                        <p>
+                            Following is the Data Dictionary for Credit Card dataset:
+                        </p>
+
+                        <ol>
+                            <li>
+                                <p><strong>CUSTID:</strong> Identification of Credit Cardholder (Categorical)</p>
+                            </li>
+                            <li>
+                                <p><strong>BALANCE:</strong> Balance amount left
+                                    in their account to make purchases.</p>
+                            </li>
+                            <li>
+                                <p><strong>BALANCEFREQUENCY:</strong> How frequently the Balance is updated, score
+                                    between 0 and 1 (1 =
+                                    frequently updated, 0 = not frequently updated).</p>
+                            </li>
+                            <li>
+                                <p><strong>PURCHASES:</strong> Amount of purchases made from the account.</p>
+                            </li>
+                            <li>
+                                <p><strong>ONEOFFPURCHASES:</strong> Maximum purchase amount did in one-go.</p>
+                            </li>
+                            <li>
+                                <p><strong>INSTALLMENTSPURCHASES:</strong> Amount of purchase done in
+                                    installment.</p>
+                            </li>
+                            <li>
+                                <p><strong>CASH ADVANCE:</strong> Cash in advance given by the user.</p>
+                            </li>
+                            <li>
+                                <p><strong>PURCHASESFREQUENCY:</strong> How frequently the Purchases
+                                    are being made score between 0 and 1 (1 = frequently purchased, 0 = not frequently
+                                    purchased).</p>
+                            </li>
+                            <li>
+                                <p><strong>ONEOFFPURCHASESFREQUENCY:</strong> How frequently Purchases
+                                    are happening in one-go (1 = frequently purchased, 0 = not frequently purchased).
+                                </p>
+                            </li>
+                            <li>
+                                <p><strong>PURCHASESINSTALLMENTSFREQUENCY:</strong> How frequently
+                                    purchases in installments are being done (1 = frequently done, 0 = not frequently
+                                    done).</p>
+                            </li>
+                            <li>
+                                <p><strong>CASHADVANCEFREQUENCY:</strong> How frequently the cash in
+                                    advance being paid.</p>
+                            </li>
+                            <li>
+                                <p><strong>CASHADVANCETRX:</strong> Number of Transactions made
+                                    with “Cash in Advanced”.</p>
+                            </li>
+                            <li>
+                                <p><strong>PURCHASESTRX:</strong> Number of purchase transactions
+                                    made.</p>
+                            </li>
+                            <li>
+                                <p><strong>CREDIT LIMIT:</strong> Limit of Credit Card for user
+                                </p>
+                            </li>
+                            <li>
+                                <p><strong>PAYMENTS:</strong> Amount of Payment done by the user.</p>
+                            </li>
+                            <li>
+                                <p><strong>MINIMUM_PAYMENTS:</strong> Minimum amount of payments
+                                    made by the user.</p>
+                            </li>
+                            <li>
+                                <p><strong>PRCFULLPAYMENT:</strong> Percent of full payment paid
+                                    by the user.</p>
+                            </li>
+                            <li>
+                                <p><strong>TENURE:</strong> Tenure of credit card service for
+                                    user.</p>
+                            </li>
+                        </ol>
+
+                        <br>
+                        <p style="font-size:25px"> <strong>Data Analysis</strong></p>
+                        <p>
+                            After looking at the dataset we checked for variables distributions which are presented
+                            here:
+                        </p>
+                        <p style="font-size:25px"> <strong>Balance</strong></p>
+                        <p>
+                            The variable&nbsp;<strong>“Balance”</strong>&nbsp;a mean of&nbsp;<strong>1601.22
+                                USD</strong>&nbsp;with a
+                            standard
+                            deviation of&nbsp;<strong>2095.57 USD (Appendix 1)</strong>. Regarding its distribution,
+                            it’s
+                            clear that it has a bias to
+                            the right, as
+                            is to be expected when working with financial data with a high number of atypical values.
+                        </p>
+                        <p style="text-align:center;"><img src="../../images/projects/project-5/balance.png">
+                        </p>
+                        <p style="text-align:center;"><strong><i>Balance distribution</i></strong></p><br><br>
+                        <br>
+                        <p style="font-size:25px"> <strong>Purchases</strong></p>
+                        <p>
+                            The variable&nbsp;<strong>“Purchases”</strong>&nbsp;presented a mean of&nbsp;<strong>1025.44
+                                USD</strong>&nbsp;and a
+                            standard deviation
+                            of&nbsp;
+                            <strong>2167.1 USD (Appendix 2)</strong>. Regarding its distribution, it’s clear that it has
+                            a bias to the right.
+                        </p>
+                        <p style="text-align:center;"><img src="../../images/projects/project-5/purchases.png">
+                        </p>
+                        <p style="text-align:center;"><strong><i>Purchases distribution</i></strong></p><br><br>
+                        <br>
+                        <p style="font-size:25px"> <strong>Cash Advance</strong></p>
+                        <p>
+                            Regarding&nbsp;<strong>“Cash Advance”</strong>&nbsp;it presented a mean
+                            of&nbsp;<strong>994.18 USD</strong>&nbsp;and a
+                            standard deviation
+                            of&nbsp;
+                            <strong>2121.45 USD (Appendix 3)</strong>.
+                        </p>
+                        <p style="text-align:center;"><img src="../../images/projects/project-5/cashadvance.png">
+                        </p>
+                        <p style="text-align:center;"><strong><i>Cash advance distribution</i></strong></p><br><br>
+                        <br>
+                        <p style="font-size:25px"> <strong>Credit Limit</strong></p>
+                        <p>
+                            The&nbsp;<strong>“Credit limit”</strong>&nbsp;variable presented a mean
+                            of&nbsp;<strong>4522.09 USD</strong>&nbsp;and a
+                            standard deviation
+                            of&nbsp;
+                            <strong>3659.24 USD (Appendix 4)</strong>.
+                        </p>
+                        <p style="text-align:center;"><img src="../../images/projects/project-5/creditlimit.png">
+                        </p>
+                        <p style="text-align:center;"><strong><i>Credit limit distribution</i></strong></p><br><br>
+                        <br>
+                        <p style="font-size:25px"> <strong>Payments</strong></p>
+                        <p>
+                            On the&nbsp;<strong>“Payments"</strong>&nbsp;statistical results, we found a mean of
+                            &nbsp;<strong>1784.47 USD</strong>&nbsp;with a standard deviation of&nbsp;
+                            <strong>2909.81 USD (Appendix 5)</strong>.
+                        </p>
+                        <p style="text-align:center;"><img src="../../images/projects/project-5/payments.png">
+                        </p>
+                        <p style="text-align:center;"><strong><i>Payments distribution</i></strong></p><br><br>
+                        <br>
+                        <p style="font-size:25px"> <strong>Minimum Payments</strong></p>
+                        <p>
+                            Finally,&nbsp;<strong>“Minimum Payments”</strong>&nbsp;presented a mean
+                            of&nbsp;<strong>864.30 USD</strong>&nbsp;and a
+                            standard deviation
+                            of&nbsp;
+                            <strong>2372.56 USD (Appendix 6)</strong>.
+                        </p>
+                        <p style="text-align:center;"><img src="../../images/projects/project-5/cashadvance.png">
+                        </p>
+                        <p style="text-align:center;"><strong><i>Minimum payments distribution</i></strong></p><br><br>
+                        <br>
+                        <br>
+                        <p style="font-size:35px"> <strong>METHODS</strong></p>
+                        <p>
+                            Knowing that the dataset had high values on the variable’s standard deviation like it was
+                            presented before, we moved on doing some normalization techniques
+                            like&nbsp;<strong>StandardScaler,
+                                MinMaxScaler, RobustScaler, and Normalizer</strong>, being the last two with better
+                            results. Later,
+                            we used&nbsp;<strong>Hopkins Statistics</strong>&nbsp;which consists of testing spatial
+                            randomness
+                            within the data to
+                            check for clustering tendencies [4][5]. The values ​​range between 0 and 1. If the result is
+                            less than or equal to 0.5 the data is uniformly distributed. On the other hand, if the
+                            result is in the range of 0.77–0.99 it represents a high tendency to clustering. For the
+                            present case study, the average of the Hopkins statistic resulted in 0.90.
+                        </p>
+                        <p>
+                            Subsequently, the number of clusters (k) optimized with the silhouette value technique was
+                            found, which measures how similar a point is to its cluster (cohesion) compared to other
+                            clusters (correlation). The Davies Bouldin metric was also taken into account, which is a
+                            measure of the average similarity of each cluster with its most similar, where the
+                            similarity is the relationship between the distances within the cluster and the distances
+                            between the clusters, where the minimum score is zero, and lower values ​​indicate better
+                            grouping. So, the result of the above explanation was the optimized (k) number for the
+                            present study and it was 5 clusters, as shown in the following image:
+
+                        </p>
+
+                        <p style="text-align:center;"><img src="../../images/projects/project-5/eblow.png"></p>
+                        <p style="text-align:center;"><strong><i>Silhouette curve</i></strong></p><br><br>
+                        <br>
+
+                        <p>
+                            Now, since the data set has 18 columns it is essential to apply some method of
+                            dimensionality reduction. Without a doubt, one of the most widely implemented methods is PCA
+                            (Principal Component Analysis), highlighting that this is traditionally a linear technique
+                            to project multidimensional data in subspaces of lesser dimension with a minimum loss of
+                            variance [6 ]. However, there are several applications where the data is in a
+                            lower-dimensional subspace that is not linear, in these cases linear PCA is not the optimal
+                            method to retrieve this subspace and therefore represents the largest proportion variance in
+                            the data. Therefore, other methods for non-linear data were explored, such
+                            as&nbsp;<strong>Isomap</strong>&nbsp;(Isometric Mapping) which seeks a lower-dimensional
+                            embedding that
+                            maintains the geodetic
+                            distances between the points [7], highlighting that the present study was defined with two
+                            components. In this way, the data was trained with
+                            the&nbsp;<strong>K-Means</strong>&nbsp;algorithm to
+                            define each of
+                            the clusters, resulting in the grouping that can be seen below:
+
+                        </p>
+                        <p style="text-align:center;"><img src="../../images/projects/project-5/reduction.png"></p>
+                        <p style="text-align:center;"><strong><i>Clustering</i></strong></p><br><br>
+                        <br>
+                        <p>
+                            Finally, based on the clustering carried out by the algorithm of each client, the Random
+                            Forest classifier was applied to determine the most relevant features (columns) for the
+                            classification, to reduce data dimensionality for a detailed analysis. The threshold was
+                            defined as 0.06, resulting in the most relevant columns being: BALANCE, PURCHASES,
+                            CASH_ADVANCE, CREDIT_LIMIT, PAYMENTS, MINIMUM_PAYMENTS with a precision in the classifier of
+                            96%.
+
+                        </p>
+
+                        <p style="font-size:35px"> <strong>RESULTS</strong></p>
+                        <p>
+                            From the most essential features, an analysis was made to establish customer's behaviors and
+                            the difference between them.
+                        </p>
+                        <p>
+                            The cluster layout is represented in the following image:
+
+                        </p>
+                        <p style="text-align:center;"><img src="../../images/projects/project-5/cluster.png"></p>
+                        <p style="text-align:center;"><strong><i>Cluster distribution</i></strong></p><br><br>
+                        <br>
+                        <p>
+                            From the frequency of the cluster of observation, it can be seen that most of the customers
+                            are classified in the third and fourth clusters. From this observation, a detailed analysis
+                            was made regarding the behavior of the classification concerning the most important
+                            features.
+                        </p>
+                        <br><br>
+
+                        <p style="font-size:25px"> <strong>Cash advance & Purchases Vs Clusters</strong></p>
+                        <p>
+                            The following distribution shows the behavior of "PURCHASES" as linear, in addition to that,
+                            the behavior of "CASH_ADVANCE" is presented using a bar diagram representation. From there,
+                            it can be seen that the clusters classified as 0, 2, and 4 represent few payments in
+                            advance, as opposed to clusters 1 and 3.
+
+                        </p>
+                        <p style="text-align:center;"><img
+                                src="../../images/projects/project-5/CashAdvancevsPurchases.png"></p>
+                        <p style="text-align:center;"><strong><i>Cash advance Vs Purchases</i></strong></p><br><br>
+                        <br>
+                        <p>
+                            On the other hand, clients with more “PURCHASES” are classified in cluster 2, unlike the
+                            others classified in clusters 0, 1, 3, and 4. If a relationship is made between “PURCHASES”
+                            and “CASH_ADVANCE” It can be concluded that clients classified in cluster 2 have high
+                            purchases but their cash payment in advance is low, unlike clients classified in clusters 1
+                            and 3 with a high number of cash advances but low purchases.
+                        </p>
+                        <br>
+
+                        <p style="font-size:25px"> <strong>Balance & Purchases Vs Clusters</strong></p>
+                        <p>
+                            In the following distribution, we have the “BALANCE” variable presented using bar diagrams
+                            and “PURCHASES” as a linear representation. It can be seen that clients classified in the
+                            3rd cluster present high BALANCE, unlike those classified in the 4th one, having a BALANCE
+                            average of 588 USD being the lowest. If we analyze the PURCHASES variable, it can be seen
+                            that clients classified in the 2nd cluster are the ones that have the most PURCHASES with an
+                            average of 4,080 USD, unlike the clients classified on other clusters.
+
+                        </p>
+                        <p style="text-align:center;"><img src="../../images/projects/project-5/BalanceVsPurchases.png">
+                        </p>
+                        <p style="text-align:center;"><strong><i>Balance Vs Purchases</i></strong></p><br><br>
+                        <br>
+                        <p>
+                            When we look at both variables, it can be seen that customers who are classified in the
+                            second cluster have a high number of purchases but a low number of balance sheets, which
+                            makes sense if we take into account that as purchases increase, the customer’s balance
+                            decreases.
+                        </p>
+                        <br>
+                        <p style="font-size:25px"> <strong>Balance & Payments Vs clusters</strong></p>
+                        <p>
+                            In the following distribution, we have “BALANCE” presented using bar diagrams and “PAYMENTS”
+                            as a linear representation. It can be seen that clients classified in the third cluster
+                            present a high BALANCE, unlike those classified in the fourth one, with an average BALANCE
+                            of 588 USD, being the lowest. If we analyze the PAYMENTS variable, it can be seen that
+                            clients classified in the second cluster are the ones that reach an average value of 4,294
+                            USD followed by the third one with an average of 3,445 USD.
+
+                        </p>
+                        <p style="text-align:center;"><img src="../../images/projects/project-5/BalanceVsPayments.png">
+                        </p>
+                        <p style="text-align:center;"><strong><i>Balance Vs Payments</i></strong></p><br><br>
+                        <br>
+                        <p>
+                            Now, if a distribution of both variables is observed, taking into account the clients
+                            classification, it can be seen that the ones that are classified in the second cluster
+                            present a high number of payments but a not so low balance number, which is a good
+                            observation because it is appreciated that there is a tendency to pay credit cards.
+                        </p>
+
+
+
+
+                        <br> <br>
+                        <p style="font-size:35px"> <strong>CONCLUSIONS</strong></p>
+                        <p>
+                            According to the results presented above, it can be concluded that the behavior of each of
+                            the clusters is as follows:
+                        </p>
+
+                        <ul>
+                            <li>
+                                <p><strong>Cluster 0:</strong>&nbsp;These kinds of customers pay a minimum amount in
+                                    advance
+                                    and their payment
+                                    is proportional to the movement of their purchases, this means that they are good
+                                    customers paying the debts they incur with their credit cards.
+                                </p>
+                            </li>
+                            <li>
+                                <p><strong>Cluster 1:</strong>&nbsp;In this group are presented the customers who pay
+                                    the most in advance before the loan starts with a balanced balance statement because
+                                    their purchases are minimal compared to the other groups, also it is the second-best
+                                    paying.
+                                </p>
+                            </li>
+                            <li>
+                                <p><strong>Cluster 2:</strong>&nbsp;Customers in this cluster pay the minimum amount in
+                                    advance, however, it is the group that buys the most, and it is also the group that
+                                    pays the most. In other words, these types of customers are quite active regarding
+                                    the number of purchases they make with their credit cards.
+                                </p>
+                            </li>
+                            <li>
+                                <p><strong>Cluster 3:</strong>&nbsp;These clients are the ones with the highest balance
+                                    status, in addition to that, they are the second group that pays the most in advance
+                                    before starting their credit. However, they are the customers who make the least
+                                    purchases and following the same idea, they are the seconds when it comes to making
+                                    payments on the debt with their credit card. This makes sense since they have an
+                                    amount of the loan provided in advance. It can be concluded that they are
+                                    conservative and meticulous customers when buying.
+                                </p>
+                            </li>
+                            <li>
+                                <p><strong>Cluster 4:</strong>&nbsp;This group of customers has low-frequency usage of
+                                    their credit cards since it is the second group that purchases the least, in
+                                    addition to that, they are customers who pay well in proportion to their purchases.
+                                    As for the advance payment before starting the loan, it is minimal compared to the
+                                    other groups.
+                                </p>
+                            </li>
+                        </ul>
+                        <br>
+                        <p>
+                            Finally, marketing strategies can be applied based on these conclusions depending on the
+                            company’s goals, for example, if the company wants to carry out a marketing campaign to
+                            encourage the use of credit cards and at the same time apply them to customers with good
+                            payment behavior, groups 1 and 2 are ideal to take a look at. On the other hand, customers
+                            in group 3 are the most conservative when it comes to buying, therefore marketing strategies
+                            for this group should be different.
+                        </p>
+                        <br> <br>
+                        <p style="font-size:35px"><strong>RECOMMENDATIONS</strong></p>
+                        <p>
+                            For future studies, both numerical and categorical variables must be taken into account to
+                            carry out a more in-depth analysis relating to the types of variables mentioned above. On
+                            the other hand, it is recommended to explore different preprocessors and normalizers
+                            available in the scikit-learn package [8].
+                        </p>
+
+                        <br> <br>
+                        <p style="font-size:35px"><strong>ANNOTATIONS</strong></p>
+                        <p>
+                            The charts have been published on a dashboard through&nbsp;<a
+                                href="https://public.tableau.com/profile/carlos.barros#!/vizhome/Analisis_clusters/Dashboard1">Tableau
+                                Public</a>.
+                            Finally, you can find the source code for this project in the following&nbsp;<a
+                                href="https://github.com/andreshugueth/credit_card_clustering">Github
+                                repository</a>.
+                        </p> <br> <br>
+
+                        <p style="font-size:35px"> <strong>REFERENCES</strong></p>
+                        <p> [1] R. Daly, “The growth of data in banking is unstoppable”, Accenture Banking Blog, 2020.
+                            [Online]. Available:
+                            https://bankingblog.accenture.com/growth-of-data-in-banking-is-unstoppable</p>
+                        <p> [2] R. Kazem, A. Faraahi and A. Mastali, “Profiling bank customers behavior using cluster
+                            analysis for profitability”, Ieomsociety.org, 2011. [Online]. Available:
+                            http://ieomsociety.org/ieom2011/pdfs/IEOM068.pdf</p>
+                        <p> [3] “Find Your Sweet Spot”, Harvard Business Review, 2008. [Online]. Available:
+                            https://hbr.org/2008/02/find-your-sweet-spot-1.html</p>
+                        <p> [4] A. Banerjee and R. Dave, “Validating clusters using the Hopkins statistic — IEEE
+                            Conference Publication”, Ieeexplore.ieee.org, 2004. [Online]. Available:
+                            https://ieeexplore.ieee.org/document/1375706</p>
+                        <p> [5] A. Adolfssona, M. Ackermana, and N. Brownstein, “To Cluster, or Not to Cluster: An
+                            Analysis of Clusterability Methods”, Arxiv.org, 2018. [Online]. Available:
+                            https://arxiv.org/pdf/1808.08317.pdf</p>
+                        <p> [6] C. Orsenigo and C. Vercellis, “Linear versus nonlinear dimensionality reduction for
+                            banks’ credit rating prediction”, Science Direct, 2020. [Online]. Available:
+                            https://www.sciencedirect.com/science/article/abs/pii/S0950705113000816</p>
+                        <p> [7] “2.2. Manifold learning — scikit-learn 0.23.2 documentation”, Scikit-learn.org.
+                            [Online]. Available: https://scikit-learn.org/stable/modules/manifold.html#manifold</p>
+                        <p> [8] “API Reference — scikit-learn 0.23.2 documentation”, Scikit-learn.org. [Online].
+                            Available: https://scikit-learn.org/stable/modules/classes.html#module-sklearn.preprocessing
+                        </p>
+                        <br><br>
+
+                        <p style="font-size:35px"> <strong>APPENDIX</strong></p>
+                        <p>Tables with more important variables developed using statistical analysis are attached.</p>
+                        <p style="font-size:25px"> <strong>Appendix 1. Balance</strong></p>
+                        <p style="text-align:center;"><img src="../../images/projects/project-5/apendice1.png"></p><br>
+                        <p style="font-size:25px"> <strong>Appendix 2. Purchases</strong></p>
+                        <p style="text-align:center;"><img src="../../images/projects/project-5/apendice2.png"></p><br>
+                        <p style="font-size:25px"> <strong>Appendix 3. Cash advance</strong></p>
+                        <p style="text-align:center;"><img src="../../images/projects/project-5/apendice3.png"></p><br>
+                        <p style="font-size:25px"> <strong>Appendix 4. Credit limit</strong></p>
+                        <p style="text-align:center;"><img src="../../images/projects/project-5/apendice4.png"></p><br>
+                        <p style="font-size:25px"> <strong>Appendix 5. Payments</strong></p>
+                        <p style="text-align:center;"><img src="../../images/projects/project-5/apendice5.png"></p><br>
+                        <p style="font-size:25px"> <strong>Appendix 6. Minimum payments</strong></p>
+                        <p style="text-align:center;"><img src="../../images/projects/project-5/apendice6.png"></p><br>
+
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+    <footer class=py-5>
+        <div class=container>
+            <div class=row>
+                <div class="col-12 text-center">
+                    <ul class="list-inline social-icons mb-5">
+                        <li class=list-inline-item><a href=https://twitter.com/cbarros27><i
+                                    class=ti-twitter-alt></i></a></li>
+                        <li class=list-inline-item><a href=https://github.com/cbarros7><i class=ti-github></i></a></li>
+                        <li class=list-inline-item><a href=https://www.linkedin.com/in/carlosbarros7 /><i
+                                class=ti-linkedin></i></a>
+                        </li>
+                    </ul>
+                    <hr class="mx-auto border-default" style=width:90px>
+                    <p class=mt-5>Copyright © 2020</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src=../../plugins/jQuery/jquery.min.js></script>
+    <script src=../../plugins/bootstrap/bootstrap.min.js></script>
+    <script src=../../plugins/particles/particles.min.js></script>
+    <script src=../../plugins/particles/stats.min.js></script>
+    <script src=../../plugins/reading-time/readingTime.min.js></script>
+    <script src=../../js/script.min.js></script>
+</body>
+
+</html>
