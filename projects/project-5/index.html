@@ -110,6 +110,7 @@
                         </ol>
                         <br>
 
+
                         <p>
                             In other words, client classification becomes a competitive improvement because companies
                             can use their time and resources for important things. This is also approved by Bain &
@@ -221,6 +222,7 @@
 
                         <br>
                         <p style="font-size:25px"> <strong>Data Analysis</strong></p>
+
                         <p>
                             After looking at the dataset we checked for variables distributions which are presented
                             here:
@@ -234,7 +236,8 @@
                             it’s
                             clear that it has a bias to
                             the right, as
-                            is to be expected when working with financial data with a high number of atypical values.
+                            is to be expected when working with financial data with a high number of atypical
+                            values.
                         </p>
                         <p style="text-align:center;"><img src="../../images/projects/project-5/balance.png">
                         </p>
@@ -242,11 +245,13 @@
                         <br>
                         <p style="font-size:25px"> <strong>Purchases</strong></p>
                         <p>
-                            The variable&nbsp;<strong>“Purchases”</strong>&nbsp;presented a mean of&nbsp;<strong>1025.44
+                            The variable&nbsp;<strong>“Purchases”</strong>&nbsp;presented a mean
+                            of&nbsp;<strong>1025.44
                                 USD</strong>&nbsp;and a
                             standard deviation
                             of&nbsp;
-                            <strong>2167.1 USD (Appendix 2)</strong>. Regarding its distribution, it’s clear that it has
+                            <strong>2167.1 USD (Appendix 2)</strong>. Regarding its distribution, it’s clear that it
+                            has
                             a bias to the right.
                         </p>
                         <p style="text-align:center;"><img src="../../images/projects/project-5/purchases.png">
@@ -265,6 +270,7 @@
                         </p>
                         <p style="text-align:center;"><strong><i>Cash advance distribution</i></strong></p><br><br>
                         <br>
+
                         <p style="font-size:25px"> <strong>Credit Limit</strong></p>
                         <p>
                             The&nbsp;<strong>“Credit limit”</strong>&nbsp;variable presented a mean
@@ -277,6 +283,7 @@
                         </p>
                         <p style="text-align:center;"><strong><i>Credit limit distribution</i></strong></p><br><br>
                         <br>
+
                         <p style="font-size:25px"> <strong>Payments</strong></p>
                         <p>
                             On the&nbsp;<strong>“Payments"</strong>&nbsp;statistical results, we found a mean of
@@ -297,12 +304,16 @@
                         </p>
                         <p style="text-align:center;"><img src="../../images/projects/project-5/cashadvance.png">
                         </p>
-                        <p style="text-align:center;"><strong><i>Minimum payments distribution</i></strong></p><br><br>
+                        <p style="text-align:center;"><strong><i>Minimum payments distribution</i></strong></p>
+                        <br><br>
                         <br>
                         <br>
+
+
                         <p style="font-size:35px"> <strong>METHODS</strong></p>
                         <p>
-                            Knowing that the dataset had high values on the variable’s standard deviation like it was
+                            Knowing that the dataset had high values on the variable’s standard deviation like it
+                            was
                             presented before, we moved on doing some normalization techniques
                             like&nbsp;<strong>StandardScaler,
                                 MinMaxScaler, RobustScaler, and Normalizer</strong>, being the last two with better
@@ -310,22 +321,28 @@
                             we used&nbsp;<strong>Hopkins Statistics</strong>&nbsp;which consists of testing spatial
                             randomness
                             within the data to
-                            check for clustering tendencies [4][5]. The values ​​range between 0 and 1. If the result is
+                            check for clustering tendencies [4][5]. The values ​​range between 0 and 1. If the
+                            result is
                             less than or equal to 0.5 the data is uniformly distributed. On the other hand, if the
                             result is in the range of 0.77–0.99 it represents a high tendency to clustering. For the
                             present case study, the average of the Hopkins statistic resulted in 0.90.
                         </p>
                         <p>
-                            Subsequently, the number of clusters (k) optimized with the silhouette value technique was
+                            Subsequently, the number of clusters (k) optimized with the silhouette value technique
+                            was
                             found, which measures how similar a point is to its cluster (cohesion) compared to other
-                            clusters (correlation). The Davies Bouldin metric was also taken into account, which is a
+                            clusters (correlation). The Davies Bouldin metric was also taken into account, which is
+                            a
                             measure of the average similarity of each cluster with its most similar, where the
-                            similarity is the relationship between the distances within the cluster and the distances
-                            between the clusters, where the minimum score is zero, and lower values ​​indicate better
+                            similarity is the relationship between the distances within the cluster and the
+                            distances
+                            between the clusters, where the minimum score is zero, and lower values ​​indicate
+                            better
                             grouping. So, the result of the above explanation was the optimized (k) number for the
                             present study and it was 5 clusters, as shown in the following image:
 
                         </p>
+                        <br>
 
                         <p style="text-align:center;"><img src="../../images/projects/project-5/eblow.png"></p>
                         <p style="text-align:center;"><strong><i>Silhouette curve</i></strong></p><br><br>
@@ -333,23 +350,29 @@
 
                         <p>
                             Now, since the data set has 18 columns it is essential to apply some method of
-                            dimensionality reduction. Without a doubt, one of the most widely implemented methods is PCA
-                            (Principal Component Analysis), highlighting that this is traditionally a linear technique
+                            dimensionality reduction. Without a doubt, one of the most widely implemented methods is
+                            PCA
+                            (Principal Component Analysis), highlighting that this is traditionally a linear
+                            technique
                             to project multidimensional data in subspaces of lesser dimension with a minimum loss of
                             variance [6 ]. However, there are several applications where the data is in a
-                            lower-dimensional subspace that is not linear, in these cases linear PCA is not the optimal
-                            method to retrieve this subspace and therefore represents the largest proportion variance in
+                            lower-dimensional subspace that is not linear, in these cases linear PCA is not the
+                            optimal
+                            method to retrieve this subspace and therefore represents the largest proportion
+                            variance in
                             the data. Therefore, other methods for non-linear data were explored, such
                             as&nbsp;<strong>Isomap</strong>&nbsp;(Isometric Mapping) which seeks a lower-dimensional
                             embedding that
                             maintains the geodetic
-                            distances between the points [7], highlighting that the present study was defined with two
+                            distances between the points [7], highlighting that the present study was defined with
+                            two
                             components. In this way, the data was trained with
                             the&nbsp;<strong>K-Means</strong>&nbsp;algorithm to
                             define each of
                             the clusters, resulting in the grouping that can be seen below:
 
                         </p>
+                        <br>
                         <p style="text-align:center;"><img src="../../images/projects/project-5/reduction.png"></p>
                         <p style="text-align:center;"><strong><i>Clustering</i></strong></p><br><br>
                         <br>
@@ -358,26 +381,31 @@
                             Forest classifier was applied to determine the most relevant features (columns) for the
                             classification, to reduce data dimensionality for a detailed analysis. The threshold was
                             defined as 0.06, resulting in the most relevant columns being: BALANCE, PURCHASES,
-                            CASH_ADVANCE, CREDIT_LIMIT, PAYMENTS, MINIMUM_PAYMENTS with a precision in the classifier of
+                            CASH_ADVANCE, CREDIT_LIMIT, PAYMENTS, MINIMUM_PAYMENTS with a precision in the
+                            classifier of
                             96%.
 
                         </p>
 
                         <p style="font-size:35px"> <strong>RESULTS</strong></p>
                         <p>
-                            From the most essential features, an analysis was made to establish customer's behaviors and
+                            From the most essential features, an analysis was made to establish customer's behaviors
+                            and
                             the difference between them.
                         </p>
                         <p>
                             The cluster layout is represented in the following image:
 
                         </p>
+                        <br>
                         <p style="text-align:center;"><img src="../../images/projects/project-5/cluster.png"></p>
                         <p style="text-align:center;"><strong><i>Cluster distribution</i></strong></p><br><br>
                         <br>
                         <p>
-                            From the frequency of the cluster of observation, it can be seen that most of the customers
-                            are classified in the third and fourth clusters. From this observation, a detailed analysis
+                            From the frequency of the cluster of observation, it can be seen that most of the
+                            customers
+                            are classified in the third and fourth clusters. From this observation, a detailed
+                            analysis
                             was made regarding the behavior of the classification concerning the most important
                             features.
                         </p>
@@ -385,35 +413,47 @@
 
                         <p style="font-size:25px"> <strong>Cash advance & Purchases Vs Clusters</strong></p>
                         <p>
-                            The following distribution shows the behavior of "PURCHASES" as linear, in addition to that,
-                            the behavior of "CASH_ADVANCE" is presented using a bar diagram representation. From there,
+                            The following distribution shows the behavior of "PURCHASES" as linear, in addition to
+                            that,
+                            the behavior of "CASH_ADVANCE" is presented using a bar diagram representation. From
+                            there,
                             it can be seen that the clusters classified as 0, 2, and 4 represent few payments in
                             advance, as opposed to clusters 1 and 3.
 
                         </p>
+                        <br>
+
                         <p style="text-align:center;"><img
                                 src="../../images/projects/project-5/CashAdvancevsPurchases.png"></p>
                         <p style="text-align:center;"><strong><i>Cash advance Vs Purchases</i></strong></p><br><br>
                         <br>
                         <p>
                             On the other hand, clients with more “PURCHASES” are classified in cluster 2, unlike the
-                            others classified in clusters 0, 1, 3, and 4. If a relationship is made between “PURCHASES”
+                            others classified in clusters 0, 1, 3, and 4. If a relationship is made between
+                            “PURCHASES”
                             and “CASH_ADVANCE” It can be concluded that clients classified in cluster 2 have high
-                            purchases but their cash payment in advance is low, unlike clients classified in clusters 1
+                            purchases but their cash payment in advance is low, unlike clients classified in
+                            clusters 1
                             and 3 with a high number of cash advances but low purchases.
                         </p>
                         <br>
 
                         <p style="font-size:25px"> <strong>Balance & Purchases Vs Clusters</strong></p>
                         <p>
-                            In the following distribution, we have the “BALANCE” variable presented using bar diagrams
-                            and “PURCHASES” as a linear representation. It can be seen that clients classified in the
-                            3rd cluster present high BALANCE, unlike those classified in the 4th one, having a BALANCE
-                            average of 588 USD being the lowest. If we analyze the PURCHASES variable, it can be seen
-                            that clients classified in the 2nd cluster are the ones that have the most PURCHASES with an
+                            In the following distribution, we have the “BALANCE” variable presented using bar
+                            diagrams
+                            and “PURCHASES” as a linear representation. It can be seen that clients classified in
+                            the
+                            3rd cluster present high BALANCE, unlike those classified in the 4th one, having a
+                            BALANCE
+                            average of 588 USD being the lowest. If we analyze the PURCHASES variable, it can be
+                            seen
+                            that clients classified in the 2nd cluster are the ones that have the most PURCHASES
+                            with an
                             average of 4,080 USD, unlike the clients classified on other clusters.
 
                         </p>
+                        <br>
                         <p style="text-align:center;"><img src="../../images/projects/project-5/BalanceVsPurchases.png">
                         </p>
                         <p style="text-align:center;"><strong><i>Balance Vs Purchases</i></strong></p><br><br>
@@ -427,14 +467,18 @@
                         <br>
                         <p style="font-size:25px"> <strong>Balance & Payments Vs clusters</strong></p>
                         <p>
-                            In the following distribution, we have “BALANCE” presented using bar diagrams and “PAYMENTS”
+                            In the following distribution, we have “BALANCE” presented using bar diagrams and
+                            “PAYMENTS”
                             as a linear representation. It can be seen that clients classified in the third cluster
-                            present a high BALANCE, unlike those classified in the fourth one, with an average BALANCE
+                            present a high BALANCE, unlike those classified in the fourth one, with an average
+                            BALANCE
                             of 588 USD, being the lowest. If we analyze the PAYMENTS variable, it can be seen that
-                            clients classified in the second cluster are the ones that reach an average value of 4,294
+                            clients classified in the second cluster are the ones that reach an average value of
+                            4,294
                             USD followed by the third one with an average of 3,445 USD.
 
                         </p>
+                        <br>
                         <p style="text-align:center;"><img src="../../images/projects/project-5/BalanceVsPayments.png">
                         </p>
                         <p style="text-align:center;"><strong><i>Balance Vs Payments</i></strong></p><br><br>
@@ -452,11 +496,13 @@
                         <br> <br>
                         <p style="font-size:35px"> <strong>CONCLUSIONS</strong></p>
                         <p>
-                            According to the results presented above, it can be concluded that the behavior of each of
+                            According to the results presented above, it can be concluded that the behavior of each
+                            of
                             the clusters is as follows:
                         </p>
 
-                        <ul>
+                        <ol>
+
                             <li>
                                 <p><strong>Cluster 0:</strong>&nbsp;These kinds of customers pay a minimum amount in
                                     advance
@@ -497,21 +543,26 @@
                                     other groups.
                                 </p>
                             </li>
-                        </ul>
+                        </ol>
+
                         <br>
                         <p>
                             Finally, marketing strategies can be applied based on these conclusions depending on the
                             company’s goals, for example, if the company wants to carry out a marketing campaign to
                             encourage the use of credit cards and at the same time apply them to customers with good
-                            payment behavior, groups 1 and 2 are ideal to take a look at. On the other hand, customers
-                            in group 3 are the most conservative when it comes to buying, therefore marketing strategies
+                            payment behavior, groups 1 and 2 are ideal to take a look at. On the other hand,
+                            customers
+                            in group 3 are the most conservative when it comes to buying, therefore marketing
+                            strategies
                             for this group should be different.
                         </p>
                         <br> <br>
                         <p style="font-size:35px"><strong>RECOMMENDATIONS</strong></p>
                         <p>
-                            For future studies, both numerical and categorical variables must be taken into account to
-                            carry out a more in-depth analysis relating to the types of variables mentioned above. On
+                            For future studies, both numerical and categorical variables must be taken into account
+                            to
+                            carry out a more in-depth analysis relating to the types of variables mentioned above.
+                            On
                             the other hand, it is recommended to explore different preprocessors and normalizers
                             available in the scikit-learn package [8].
                         </p>
@@ -528,10 +579,12 @@
                         </p> <br> <br>
 
                         <p style="font-size:35px"> <strong>REFERENCES</strong></p>
-                        <p> [1] R. Daly, “The growth of data in banking is unstoppable”, Accenture Banking Blog, 2020.
+                        <p> [1] R. Daly, “The growth of data in banking is unstoppable”, Accenture Banking Blog,
+                            2020.
                             [Online]. Available:
                             https://bankingblog.accenture.com/growth-of-data-in-banking-is-unstoppable</p>
-                        <p> [2] R. Kazem, A. Faraahi and A. Mastali, “Profiling bank customers behavior using cluster
+                        <p> [2] R. Kazem, A. Faraahi and A. Mastali, “Profiling bank customers behavior using
+                            cluster
                             analysis for profitability”, Ieomsociety.org, 2011. [Online]. Available:
                             http://ieomsociety.org/ieom2011/pdfs/IEOM068.pdf</p>
                         <p> [3] “Find Your Sweet Spot”, Harvard Business Review, 2008. [Online]. Available:
@@ -548,24 +601,34 @@
                         <p> [7] “2.2. Manifold learning — scikit-learn 0.23.2 documentation”, Scikit-learn.org.
                             [Online]. Available: https://scikit-learn.org/stable/modules/manifold.html#manifold</p>
                         <p> [8] “API Reference — scikit-learn 0.23.2 documentation”, Scikit-learn.org. [Online].
-                            Available: https://scikit-learn.org/stable/modules/classes.html#module-sklearn.preprocessing
+                            Available:
+                            https://scikit-learn.org/stable/modules/classes.html#module-sklearn.preprocessing
                         </p>
                         <br><br>
 
+
+
                         <p style="font-size:35px"> <strong>APPENDIX</strong></p>
-                        <p>Tables with more important variables developed using statistical analysis are attached.</p>
+                        <p>Tables with more important variables developed using statistical analysis are attached.
+                        </p>
                         <p style="font-size:25px"> <strong>Appendix 1. Balance</strong></p>
-                        <p style="text-align:center;"><img src="../../images/projects/project-5/apendice1.png"></p><br>
+                        <p style="text-align:center;"><img src="../../images/projects/project-5/apendice1.png"></p>
+                        <br>
                         <p style="font-size:25px"> <strong>Appendix 2. Purchases</strong></p>
-                        <p style="text-align:center;"><img src="../../images/projects/project-5/apendice2.png"></p><br>
+                        <p style="text-align:center;"><img src="../../images/projects/project-5/apendice2.png"></p>
+                        <br>
                         <p style="font-size:25px"> <strong>Appendix 3. Cash advance</strong></p>
-                        <p style="text-align:center;"><img src="../../images/projects/project-5/apendice3.png"></p><br>
+                        <p style="text-align:center;"><img src="../../images/projects/project-5/apendice3.png"></p>
+                        <br>
                         <p style="font-size:25px"> <strong>Appendix 4. Credit limit</strong></p>
-                        <p style="text-align:center;"><img src="../../images/projects/project-5/apendice4.png"></p><br>
+                        <p style="text-align:center;"><img src="../../images/projects/project-5/apendice4.png"></p>
+                        <br>
                         <p style="font-size:25px"> <strong>Appendix 5. Payments</strong></p>
-                        <p style="text-align:center;"><img src="../../images/projects/project-5/apendice5.png"></p><br>
+                        <p style="text-align:center;"><img src="../../images/projects/project-5/apendice5.png"></p>
+                        <br>
                         <p style="font-size:25px"> <strong>Appendix 6. Minimum payments</strong></p>
-                        <p style="text-align:center;"><img src="../../images/projects/project-5/apendice6.png"></p><br>
+                        <p style="text-align:center;"><img src="../../images/projects/project-5/apendice6.png"></p>
+                        <br>
 
                     </div>
                 </article>
